@@ -1,0 +1,20 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: rgb(10, 168, 21);
+    color: whitesmoke;
+
+    .main a {
+        margin-right: 25px;
+        font-size: smaller;
+    }
+
+    .main a:hover {
+        color: rgb(235, 223, 223);
+    }
+
+    mat-icon {
+        color: whitesmoke;
+    }
+}
