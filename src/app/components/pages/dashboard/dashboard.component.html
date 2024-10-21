@@ -1,1 +1,43 @@
-<mat-card></mat-card>
+<mat-card>
+    <div class="welcome">
+        <div class="welcome-title">
+            <mat-card-title>Seja Bem vindo, Vitor Costa!</mat-card-title>
+            <br>
+            <p>Saldo geral</p>
+            @if (!visibility) {
+            <div class="saldo">
+                <p>R$</p>
+                <b class="value">2.250,00</b>
+                <button mat-icon-button aria-label="Mostrar saldo" (click)="visibilityTrue()"><mat-icon>visibility</mat-icon></button>
+            </div>
+            } @else {
+            <div class="saldo">
+                <p>R$</p>
+                <b class="value">*****</b>
+                <button mat-icon-button aria-label="Mostrar saldo" (click)="visibility_off()"><mat-icon>visibility_off</mat-icon></button>
+            </div>
+            }
+        </div>
+
+        <hr>
+
+        <div class="resultados">
+            <div class="receita">
+                <mat-card-subtitle>Total de vendas</mat-card-subtitle>
+                <p>R$ 1350,00</p>
+            </div>
+            <div class="receita">
+                <mat-card-subtitle>Despesas</mat-card-subtitle>
+                <p>R$ 1350,00</p>
+            </div>
+            <div class="receita">
+                <mat-card-subtitle>Receita</mat-card-subtitle>
+                <p>R$ 1350,00</p>
+            </div>
+            <div class="receita">
+                <mat-card-subtitle>Meta</mat-card-subtitle>
+                <p>R$ 13.500,00</p>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,36 @@
+.welcome {
+    margin: 25px;
+}
+
+.welcome-title {
+    margin: 10px;
+}
+
+.saldo {
+    display: flex;
+    margin-top: 15px;
+
+    button{
+        margin-left: 5px;
+    }
+
+    .value {
+        font-size: 22px;
+        margin-left: 15px;
+    }
+}
+
+mat-card-subtitle{
+    color: black;
+}
+
+mat-icon {
+    vertical-align:top;
+    color: rgb(107, 101, 101);
+}
+
+.resultados {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
