@@ -1,27 +1,24 @@
-# CashSystem
+# Template Cash$ystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) versão 17.0.3.
 
-## Development server
+## Iniciando Scripts.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Comece instalando as dependências do projeto: `npm install`.
 
-## Code scaffolding
+* Execute `ng serve` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Esta documentação está em constante mudança então lembre-se de mante-la sempre atualizada e seguir as dicas aqui disponiveis.
+
+## Software.
+
+* Todos os dados aqui apresentados são meramente ilustrativos
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para construir o projeto. Os arquivos do build serão armazenados no diretório `dist/`.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Obrigado .\
+Made with :heart: by **Vitor Costa** - [Linkedin](https://www.linkedin.com/in/vitor-costa-10566b22a/
