@@ -10,7 +10,7 @@
     display: flex;
     margin-top: 15px;
 
-    button{
+    button {
         margin-left: 5px;
     }
 
@@ -20,12 +20,12 @@
     }
 }
 
-mat-card-subtitle{
+mat-card-subtitle {
     color: black;
 }
 
 mat-icon {
-    vertical-align:top;
+    vertical-align: top;
     color: rgb(107, 101, 101);
 }
 
@@ -33,4 +33,38 @@ mat-icon {
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
+}
+
+.carteira {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 50%;
+    color: black;
+
+    mat-card-title {
+        margin: 15px;
+    }
+}
+
+.investimentos {
+    margin: 15px;
+
+    .investimento {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icone{
+        width: 60px;
+        height: 60px;
+    }
+
+    .investimento-item {
+        display: flex;
+    }
+
+    .descricao{
+        margin-left: 25px;
+    }
 }

@@ -8,13 +8,15 @@
             <div class="saldo">
                 <p>R$</p>
                 <b class="value">2.250,00</b>
-                <button mat-icon-button aria-label="Mostrar saldo" (click)="visibilityTrue()"><mat-icon>visibility</mat-icon></button>
+                <button mat-icon-button aria-label="Mostrar saldo"
+                    (click)="visibilityTrue()"><mat-icon>visibility</mat-icon></button>
             </div>
             } @else {
             <div class="saldo">
                 <p>R$</p>
                 <b class="value">*****</b>
-                <button mat-icon-button aria-label="Mostrar saldo" (click)="visibility_off()"><mat-icon>visibility_off</mat-icon></button>
+                <button mat-icon-button aria-label="Mostrar saldo"
+                    (click)="visibility_off()"><mat-icon>visibility_off</mat-icon></button>
             </div>
             }
         </div>
@@ -41,3 +43,50 @@
         </div>
     </div>
 </mat-card>
+
+<mat-card class="carteira">
+    <mat-card-title>
+        Carteira de investimento
+    </mat-card-title>
+
+    <div class="investimentos">
+        <div class="investimento">
+            <div class="investimento-item">
+                <img src="assets/img/itau.png" class="icone">
+                <div class="descricao">
+                    <b class="titulo">Itau Unibanco S.A</b>
+                    <p class="titulo">Ação - 22/10/2024</p>
+                </div>
+            </div>
+            <div>
+                <p> <b>R$ 135,00</b> / mês </p>
+            </div>
+        </div>
+        <div class="investimento">
+            <div class="investimento-item">
+                <img src="assets/img/McDonalds.png" class="icone">
+                <div class="descricao">
+                    <b class="titulo">McDonald´s Corp</b>
+                    <p class="titulo">Ação - 22/10/2024</p>
+                </div>
+            </div>
+            <div>
+                <p> <b>R$ 25,00</b> / mês </p>
+            </div>
+        </div>
+        <div class="investimento">
+            <div class="investimento-item">
+                <img src="assets/img/petrobras.png" class="icone">
+                <div class="descricao">
+                    <b class="titulo">Petróleo Brasileiro S.A.</b>
+                    <p class="titulo">Ação - 22/10/2024</p>
+                </div>
+            </div>
+            <div>
+                <p> <b>R$ 13,50</b> / mês </p>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<br>
