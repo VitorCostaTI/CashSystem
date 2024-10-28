@@ -1,3 +1,5 @@
+![img](/capa/dashboard.png "Capa Projeto")
+
 # Template Cash$ystem
 
 Este projeto é desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) versão 17.0.3.
