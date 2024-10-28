@@ -7,7 +7,7 @@
             @if (!visibility) {
             <div class="saldo">
                 <p>R$</p>
-                <b class="value">2.250,00</b>
+                <b class="value">2.265,50</b>
                 <button mat-icon-button aria-label="Mostrar saldo"
                     (click)="visibilityTrue()"><mat-icon>visibility</mat-icon></button>
             </div>
@@ -30,11 +30,11 @@
             </div>
             <div class="receita">
                 <mat-card-subtitle>Despesas</mat-card-subtitle>
-                <p>R$ 1350,00</p>
+                <p>R$ 350,00</p>
             </div>
             <div class="receita">
                 <mat-card-subtitle>Receita</mat-card-subtitle>
-                <p>R$ 1350,00</p>
+                <p>R$ 1.000,00</p>
             </div>
             <div class="receita">
                 <mat-card-subtitle>Meta</mat-card-subtitle>
@@ -44,49 +44,92 @@
     </div>
 </mat-card>
 
-<mat-card class="carteira">
-    <mat-card-title>
-        Carteira de investimento
-    </mat-card-title>
+<div class="rendimentos">
+    <mat-card class="carteira">
+        <mat-card-title>
+            Carteira de investimento
+        </mat-card-title>
 
-    <div class="investimentos">
-        <div class="investimento">
-            <div class="investimento-item">
-                <img src="assets/img/itau.png" class="icone">
-                <div class="descricao">
-                    <b class="titulo">Itau Unibanco S.A</b>
-                    <p class="titulo">Ação - 22/10/2024</p>
+        <div class="investimentos">
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/samsung.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo"> Samsung Electronics Co Ltd </b>
+                        <p class="titulo">Ação - 22/10/2024</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 56,20</b> / mês </p>
                 </div>
             </div>
-            <div>
-                <p> <b>R$ 135,00</b> / mês </p>
-            </div>
-        </div>
-        <div class="investimento">
-            <div class="investimento-item">
-                <img src="assets/img/McDonalds.png" class="icone">
-                <div class="descricao">
-                    <b class="titulo">McDonald´s Corp</b>
-                    <p class="titulo">Ação - 22/10/2024</p>
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/McDonalds.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo">McDonald´s Corp</b>
+                        <p class="titulo">Ação - 22/10/2024</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 25,00</b> / mês </p>
                 </div>
             </div>
-            <div>
-                <p> <b>R$ 25,00</b> / mês </p>
-            </div>
-        </div>
-        <div class="investimento">
-            <div class="investimento-item">
-                <img src="assets/img/petrobras.png" class="icone">
-                <div class="descricao">
-                    <b class="titulo">Petróleo Brasileiro S.A.</b>
-                    <p class="titulo">Ação - 22/10/2024</p>
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/petrobras.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo">Petróleo Brasileiro S.A.</b>
+                        <p class="titulo">Ação - 22/10/2024</p>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 39,50</b> / mês </p>
                 </div>
             </div>
-            <div>
-                <p> <b>R$ 13,50</b> / mês </p>
+        </div>
+    </mat-card>
+    <mat-card class="carteira">
+        <mat-card-title>
+            Carteira
+        </mat-card-title>
+
+        <div class="investimentos">
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/itau.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo">Itau Unibanco S.A</b>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 1235,00</b> </p>
+                </div>
+            </div>
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/nubank.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo">Nu Financeira S.A</b>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 815,00</b> </p>
+                </div>
+            </div>
+            <div class="investimento">
+                <div class="investimento-item">
+                    <img src="assets/img/bb.png" class="icone">
+                    <div class="descricao">
+                        <b class="titulo">Banco do Brasil SA</b>
+                    </div>
+                </div>
+                <div>
+                    <p> <b>R$ 215,50</b> </p>
+                </div>
             </div>
         </div>
-    </div>
-</mat-card>
+    </mat-card>
+</div>
 
 <br>

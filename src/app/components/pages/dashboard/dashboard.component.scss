@@ -35,10 +35,15 @@ mat-icon {
     justify-content: space-around;
 }
 
+.rendimentos{
+    display: flex;
+    justify-content: space-between;
+}
+
 .carteira {
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 50%;
+    width: 49%;
     color: black;
 
     mat-card-title {
