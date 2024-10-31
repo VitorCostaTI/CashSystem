@@ -1,0 +1,10 @@
+.conversao{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    mat-form-field{
+        margin: 15px;
+        width: 50%;
+    }
+}

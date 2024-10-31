@@ -5,11 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 import { SharedModule } from './Shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
+import { MovimentacoesComponent } from './components/pages/movimentacoes/movimentacoes.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
       { path: '', component: DashboardComponent },
+      { path: 'movimentacao', component: MovimentacoesComponent },
     ]
   }
 ];
@@ -19,6 +22,7 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     DashboardComponent,
+    MovimentacoesComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,9 @@ const routes: Routes = [
   ],
   bootstrap: [
     AppComponent,
+  ],
+  providers: [
+    provideAnimationsAsync()
   ],
 })
 
