@@ -2,12 +2,23 @@ html,
 body {
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: rgb(245, 245, 245);
+    background: rgb(250, 242, 242);
+    background: linear-gradient(
+        90deg,
+        rgba(250, 242, 242, 1) 6%,
+        rgba(234, 227, 227, 1) 47%,
+        rgba(245, 245, 245, 1) 100%
+    );
 }
 
-mat-card-title{
+mat-card {
+    background-color: white !important;
+}
+
+mat-card-title {
     margin: 15px !important;
 }

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './movimentacoes.component.scss'
 })
 export class MovimentacoesComponent {
-
+  value: number = 0;
+  conversao: number = 0;
 }

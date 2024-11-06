@@ -4,21 +4,27 @@
             <mat-icon>sync_alt</mat-icon>
             Movimentações
         </mat-card-title>
+        <mat-card-title>{{ (value || 0) * (conversao || 0) | currency:'BRL':'symbol':'1.2-2' }}</mat-card-title>
     </div>
 
     <div class="conversao">
         <mat-form-field>
             <mat-label>Conversão</mat-label>
-            <mat-select>
-                <mat-option value="brl">BRL</mat-option>
-                <mat-option value="usa">USA</mat-option>
-                <mat-option value="eua">EUA</mat-option>
+            <mat-select [(ngModel)]="conversao">
+                <mat-option value="0.13">GBP - 0,13</mat-option>
+                <mat-option value="0.15">CHF - 0,15</mat-option>
+                <mat-option value="0.16">EUR - 0,16</mat-option>
+                <mat-option value="0.17">USD - 0,17</mat-option>
+                <mat-option value="0.24">CAD - 0,24</mat-option>
+                <mat-option value="0.26">AUD - 0,26</mat-option>
+                <mat-option value="3.54">MXN - 3,14</mat-option>
+                <mat-option value="14.65">INR - 14,65</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Cambio</mat-label>
-            <input matInput />
+            <input matInput [(ngModel)]="value"/>
         </mat-form-field>
     </div>
 </mat-card>

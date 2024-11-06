@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +7,8 @@ import { SharedModule } from './Shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { MovimentacoesComponent } from './components/pages/movimentacoes/movimentacoes.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 const routes: Routes = [
   {
@@ -16,6 +18,8 @@ const routes: Routes = [
     ]
   }
 ];
+
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ const routes: Routes = [
     AppComponent,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: LOCALE_ID, useValue: 'pt-BR' }  // Configura a localidade para 'pt-BR'
   ],
 })
 
