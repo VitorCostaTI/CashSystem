@@ -8,6 +8,8 @@ mat-toolbar {
     .main a {
         margin-right: 25px;
         font-size: smaller;
+        text-decoration: none;
+        color: whitesmoke;
     }
 
     .main a:hover {
@@ -19,6 +21,6 @@ mat-toolbar {
     }
 }
 
-.router{
+.router {
     margin: 15px;
 }
