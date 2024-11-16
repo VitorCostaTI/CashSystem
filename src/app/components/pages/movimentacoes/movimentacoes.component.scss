@@ -1,19 +1,25 @@
-mat-card{
+mat-card {
     margin-top: 25px;
 }
 
-.conversao{
+.conversao {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    mat-form-field{
+    mat-form-field {
         margin: 15px;
         width: 50%;
     }
 }
 
-.title{
+.title {
     display: flex;
     justify-content: space-between;
+}
+
+.actions {
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
 }
