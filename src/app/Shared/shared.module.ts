@@ -47,6 +47,7 @@ const material = [
   MatExpansionModule,
   MatIconModule,
   MatInputModule,
+  FormsModule, MatFormFieldModule, MatInputModule,
   MatListModule,
   MatMenuModule,
   MatProgressSpinnerModule,

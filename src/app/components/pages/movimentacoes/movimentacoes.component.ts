@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Movimentacao } from '../../../Models/Movimentacao.model';
 
 import { v4 as uuidv4 } from 'uuid';
+import { MovimentacoesDialogComponent } from './movimentacoes-dialog/movimentacoes-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 const MovimentacaoData: Movimentacao[] = [
   {
@@ -51,11 +53,21 @@ export class MovimentacoesComponent {
   conversao: number = 0;
   visibility: boolean = false;
 
+  displayedColumns: string[] = ['obs', 'codigo', 'origem', 'destino', 'valor', 'data'];
+  dataSource = MovimentacaoData;
+
+  constructor(private dialog: MatDialog){}
+
   visibilityBoolean(): void {
     this.visibility = !this.visibility;
   }
 
-  displayedColumns: string[] = ['obs', 'codigo', 'origem', 'destino', 'valor', 'data'];
-  dataSource = MovimentacaoData;
+  openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void{
+    this.dialog.open(MovimentacoesDialogComponent, {
+      width: '80%',
+      enterAnimationDuration,
+      exitAnimationDuration
+    })
+  }
 }
 

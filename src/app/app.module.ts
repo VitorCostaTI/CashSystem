@@ -9,6 +9,9 @@ import { MovimentacoesComponent } from './components/pages/movimentacoes/movimen
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { MovimentacoesDialogComponent } from './components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   {
@@ -27,10 +30,12 @@ registerLocaleData(localePt, 'pt-BR');
     HomeComponent,
     DashboardComponent,
     MovimentacoesComponent,
+    MovimentacoesDialogComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
     SharedModule,
   ],
   bootstrap: [

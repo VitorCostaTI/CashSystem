@@ -32,7 +32,7 @@
 <div class="actions">
     <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary">Exportar relatório</button>
     &nbsp;
-    <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary">Adicionar</button>
+    <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary" (click)="openDialogMovimentacao('500ms', '250ms')">Adicionar</button>
 </div>
 
 <mat-card class="mat-elevation-z8">

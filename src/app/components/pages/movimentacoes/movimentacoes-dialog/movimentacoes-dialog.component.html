@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card-title>Movimentações</mat-card-title>
+
+    <mat-divider></mat-divider>
+
+    <form [formGroup]="registrarMovimentacao">
+        <mat-form-field appearance="fill">
+            <mat-label>Destino</mat-label>
+            <input matInput hidePlaceholder="true" formControlName="destino" placeholder="Digite o destino" />
+            <mat-error *ngIf="registrarMovimentacao.get('destino')?.hasError('required')">
+                Destino é obrigatório.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Valor</mat-label>
+            <input matInput hidePlaceholder="true" formControlName="valor" placeholder="Digite o valor" />
+            <mat-error *ngIf="registrarMovimentacao.get('valor')?.hasError('required')">
+                Valor é obrigatório.
+            </mat-error>
+        </mat-form-field>
+    </form>
+
+    <mat-divider></mat-divider>
+
+    <div class="actions">
+        <button mat-flat-button color="warn">Cancelar</button> &nbsp;
+        <button mat-flat-button color="primary">Enviar</button>
+    </div>
+</div>
