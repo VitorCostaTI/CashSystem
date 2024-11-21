@@ -16,7 +16,8 @@ export class MovimentacoesDialogComponent implements OnInit {
     this.hidePlaceholder = true;
     this.registrarMovimentacao = this.fb.group({
       destino: ['', [Validators.required]],
-      valor: ['', [Validators.required]]
+      valor: ['', [Validators.required]],
+      categoria: ['', [Validators.required]]
     });
   }
 

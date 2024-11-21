@@ -17,9 +17,23 @@
 
         <mat-form-field>
             <mat-label>Valor</mat-label>
-            <input matInput formControlName="valor" (input)="formatCurrency($event)"/>
+            <input matInput formControlName="valor" (input)="formatCurrency($event)" />
             <mat-error *ngIf="registrarMovimentacao.get('valor')?.hasError('required')">
                 Valor é obrigatório.
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div class="form">
+        <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select formControlName="categoria">
+                <mat-option value="investimento">Investimento</mat-option>
+                <mat-option value="alimentacao">Alimentação</mat-option>
+                <mat-option value="transporte">Transporte</mat-option>
+                <mat-option value="entretenimento">Entretenimento</mat-option>
+            </mat-select>
+            <mat-error *ngIf="registrarMovimentacao.get('categoria')?.hasError('required')">
+                Categoria é obrigatório.
             </mat-error>
         </mat-form-field>
     </div>
