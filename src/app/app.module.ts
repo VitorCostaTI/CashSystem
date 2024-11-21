@@ -11,6 +11,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { MovimentacoesDialogComponent } from './components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CurrencyMaskModule } from "ngx-currency-mask";
 
 const routes: Routes = [
   {
