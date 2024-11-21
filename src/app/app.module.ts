@@ -12,7 +12,6 @@ import localePt from '@angular/common/locales/pt';
 import { MovimentacoesDialogComponent } from './components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [

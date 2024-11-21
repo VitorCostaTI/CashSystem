@@ -64,7 +64,7 @@ export class MovimentacoesComponent {
 
   openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void{
     this.dialog.open(MovimentacoesDialogComponent, {
-      width: '80%',
+      width: '99%',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true,
