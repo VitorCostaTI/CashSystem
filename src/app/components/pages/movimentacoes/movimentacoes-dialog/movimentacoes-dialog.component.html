@@ -6,7 +6,7 @@
     <form [formGroup]="registrarMovimentacao">
         <mat-form-field appearance="fill">
             <mat-label>Destino</mat-label>
-            <input matInput hidePlaceholder="true" formControlName="destino" placeholder="Digite o destino" />
+            <input matInput hidePlaceholder="true" formControlName="destino" />
             <mat-error *ngIf="registrarMovimentacao.get('destino')?.hasError('required')">
                 Destino é obrigatório.
             </mat-error>
@@ -14,7 +14,7 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Valor</mat-label>
-            <input matInput hidePlaceholder="true" formControlName="valor" placeholder="Digite o valor" />
+            <input matInput hidePlaceholder="true" formControlName="valor"/>
             <mat-error *ngIf="registrarMovimentacao.get('valor')?.hasError('required')">
                 Valor é obrigatório.
             </mat-error>

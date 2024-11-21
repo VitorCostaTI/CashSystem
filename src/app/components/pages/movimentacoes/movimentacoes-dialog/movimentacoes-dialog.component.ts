@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-movimentacoes-dialog',
@@ -15,8 +15,8 @@ export class MovimentacoesDialogComponent implements OnInit {
   ngOnInit(): void {
     this.hidePlaceholder = true;
     this.registrarMovimentacao = this.fb.group({
-      destino: [''],
-      valor: ['']
+      destino: ['', [Validators.required]],
+      valor: ['', [Validators.required]]
     });
   }
 }
