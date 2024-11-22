@@ -12,12 +12,15 @@ import localePt from '@angular/common/locales/pt';
 import { MovimentacoesDialogComponent } from './components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfiguracaoComponent } from './components/pages/configuracao/configuracao.component';
+import { LimitesComponent } from './components/pages/limites/limites.component';
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
       { path: '', component: DashboardComponent },
       { path: 'movimentacao', component: MovimentacoesComponent },
+      { path: 'configuracao', component: ConfiguracaoComponent },
     ]
   }
 ];
@@ -27,10 +30,12 @@ registerLocaleData(localePt, 'pt-BR');
 @NgModule({
   declarations: [
     AppComponent,
+    ConfiguracaoComponent,
     HomeComponent,
     DashboardComponent,
     MovimentacoesComponent,
-    MovimentacoesDialogComponent
+    MovimentacoesDialogComponent,
+    LimitesComponent,
   ],
   imports: [
     BrowserModule,
