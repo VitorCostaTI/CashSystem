@@ -9,7 +9,14 @@
 
     <div class="conversao">
         <mat-form-field>
+            @if(isLoading){
+            <mat-label>Carregando...</mat-label>
+            } @else if (errLoading) {
+            <mat-label>Falha ao carregar dados...</mat-label>
+            }
+            @else {
             <mat-label>Conversor (BRL)</mat-label>
+            }
             <mat-select [(ngModel)]="conversao">
                 <mat-option *ngFor="let currency of dataCambio | keyvalue" [value]="currency.value">
                     {{ currency.key }} - {{ currency.value | number: '1.2-2' }}
@@ -26,7 +33,8 @@
 </mat-card>
 
 <div class="actions">
-    <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary" (click)="exportToExcel()">Exportar
+    <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary"
+        (click)="exportToExcel()">Exportar
         relatório</button>
     &nbsp;
     <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary"

@@ -55,6 +55,8 @@ export class MovimentacoesComponent implements OnInit {
   value: number = 0;
   conversao: number = 0;
   visibility: boolean = false;
+  isLoading: boolean = false;
+  errLoading: boolean = false;
 
   displayedColumns: string[] = ['obs', 'codigo', 'origem', 'destino', 'valor', 'data'];
   dataSource = MovimentacaoData;
@@ -75,12 +77,14 @@ export class MovimentacoesComponent implements OnInit {
   }
 
   getCambio() {
+    this.isLoading = true;
     this.movimentacaoService.getCambioBrl().subscribe({
       next: (data) => {
-        console.log(data.rates)
         this.dataCambio = data.rates;
+        this.isLoading = false;
       },
       error: (err) => {
+        this.isLoading = true;
         console.error("Falha ao consultar dados do cambio: ", err)
       }
     })
@@ -97,7 +101,6 @@ export class MovimentacoesComponent implements OnInit {
 
   openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(MovimentacoesDialogComponent, {
-      width: '99%',
       enterAnimationDuration,
       exitAnimationDuration,
       disableClose: true,
