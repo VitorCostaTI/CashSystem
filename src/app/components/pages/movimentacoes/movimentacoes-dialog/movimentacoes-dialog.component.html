@@ -27,10 +27,10 @@
         <mat-form-field>
             <mat-label>Categoria</mat-label>
             <mat-select formControlName="categoria">
-                <mat-option value="investimento">Investimento</mat-option>
                 <mat-option value="alimentacao">Alimentação</mat-option>
-                <mat-option value="transporte">Transporte</mat-option>
                 <mat-option value="entretenimento">Entretenimento</mat-option>
+                <mat-option value="investimento">Investimento</mat-option>
+                <mat-option value="transporte">Transporte</mat-option>
             </mat-select>
             <mat-error *ngIf="registrarMovimentacao.get('categoria')?.hasError('required')">
                 Categoria é obrigatório.
