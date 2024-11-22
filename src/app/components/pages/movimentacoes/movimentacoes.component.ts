@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { MovimentacoesDialogComponent } from './movimentacoes-dialog/movimentacoes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MovimentacaoService } from '../../../Services/Movimentacao/movimentacao.service';
+import * as XLSX from 'xlsx';
 
 const MovimentacaoData: Movimentacao[] = [
   {
@@ -83,6 +84,15 @@ export class MovimentacoesComponent implements OnInit {
         console.error("Falha ao consultar dados do cambio: ", err)
       }
     })
+  }
+
+  exportToExcel(): void {
+    const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.dataSource); 
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    
+    XLSX.utils.book_append_sheet(wb, ws, 'Registro Movimentações');
+
+    XLSX.writeFile(wb, 'dados-movimentacao.xlsx');
   }
 
   openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
