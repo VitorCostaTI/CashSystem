@@ -48,6 +48,7 @@ const MovimentacaoData: Movimentacao[] = [
   templateUrl: './movimentacoes.component.html',
   styleUrl: './movimentacoes.component.scss'
 })
+
 export class MovimentacoesComponent {
   value: number = 0;
   conversao: number = 0;
@@ -71,5 +72,8 @@ export class MovimentacoesComponent {
       autoFocus: false,
     })
   }
-}
 
+  openDocumention(): void {
+    window.open('assets/pdf/template-comprovante-de-pagamento.pdf', '_blank');
+  }
+}

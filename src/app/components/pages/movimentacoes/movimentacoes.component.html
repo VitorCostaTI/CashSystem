@@ -32,7 +32,8 @@
 <div class="actions">
     <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary">Exportar relatório</button>
     &nbsp;
-    <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary" (click)="openDialogMovimentacao('500ms', '250ms')">Adicionar</button>
+    <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary"
+        (click)="openDialogMovimentacao('500ms', '250ms')">Adicionar</button>
 </div>
 
 <mat-card class="mat-elevation-z8">
@@ -41,12 +42,16 @@
         <ng-container matColumnDef="obs" class="last-column">
             <th mat-header-cell *matHeaderCellDef> </th>
             <td mat-cell *matCellDef="let movimentacao">
-                <button (click)="visibilityBoolean()" mat-icon-button matTooltip="Ocultar Protocolo">
+                <button (click)="visibilityBoolean()" mat-icon-button matTooltip="Ocultar">
                     @if(visibility){
                     <mat-icon>visibility_off</mat-icon>
                     } @else {
                     <mat-icon>visibility</mat-icon>
                     }
+                </button>
+                &nbsp;
+                <button mat-icon-button (click)="openDocumention()" matTooltip="Comprovante">
+                    <mat-icon style="color: blue;">description</mat-icon>
                 </button>
             </td>
         </ng-container>
