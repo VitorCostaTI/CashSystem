@@ -12,6 +12,7 @@ import localePt from '@angular/common/locales/pt';
 import { MovimentacoesDialogComponent } from './components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CurrencyMaskModule } from "ngx-currency-mask";
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ registerLocaleData(localePt, 'pt-BR');
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     SharedModule,
+    HttpClientModule
   ],
   bootstrap: [
     AppComponent,

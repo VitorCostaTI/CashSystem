@@ -11,29 +11,26 @@
         <mat-form-field>
             <mat-label>Conversão</mat-label>
             <mat-select [(ngModel)]="conversao">
-                <mat-option value="0.13">GBP - 0,13</mat-option>
-                <mat-option value="0.15">CHF - 0,15</mat-option>
-                <mat-option value="0.16">EUR - 0,16</mat-option>
-                <mat-option value="0.17">USD - 0,17</mat-option>
-                <mat-option value="0.24">CAD - 0,24</mat-option>
-                <mat-option value="0.26">AUD - 0,26</mat-option>
-                <mat-option value="3.54">MXN - 3,14</mat-option>
-                <mat-option value="14.65">INR - 14,65</mat-option>
+                <mat-option *ngFor="let currency of dataCambio | keyvalue" [value]="currency.value">
+                    {{ currency.key }} - {{ currency.value | number: '1.2-2' }}
+                </mat-option>
             </mat-select>
         </mat-form-field>
 
+
         <mat-form-field>
-            <mat-label>Cambio</mat-label>
+            <mat-label>Valor</mat-label>
             <input matInput [(ngModel)]="value" />
         </mat-form-field>
     </div>
 </mat-card>
 
 <div class="actions">
-    <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary">Exportar relatório</button>
+    <button mat-flat-button matTooltip="Gerar documento de movimentação" color="primary">Exportar
+        relatório</button>
     &nbsp;
     <button mat-flat-button matTooltip="Registrar nova movimentação" color="primary"
-        (click)="openDialogMovimentacao('500ms', '250ms')">Adicionar</button>
+        (click)="openDialogMovimentacao('500ms', '250ms')">Registrar</button>
 </div>
 
 <mat-card class="mat-elevation-z8">

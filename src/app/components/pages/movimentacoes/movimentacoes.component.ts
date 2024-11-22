@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movimentacao } from '../../../Models/Movimentacao.model';
 
 import { v4 as uuidv4 } from 'uuid';
 import { MovimentacoesDialogComponent } from './movimentacoes-dialog/movimentacoes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MovimentacaoService } from '../../../Services/Movimentacao/movimentacao.service';
 
 const MovimentacaoData: Movimentacao[] = [
   {
@@ -49,7 +50,7 @@ const MovimentacaoData: Movimentacao[] = [
   styleUrl: './movimentacoes.component.scss'
 })
 
-export class MovimentacoesComponent {
+export class MovimentacoesComponent implements OnInit {
   value: number = 0;
   conversao: number = 0;
   visibility: boolean = false;
@@ -57,13 +58,34 @@ export class MovimentacoesComponent {
   displayedColumns: string[] = ['obs', 'codigo', 'origem', 'destino', 'valor', 'data'];
   dataSource = MovimentacaoData;
 
-  constructor(private dialog: MatDialog){}
+  dataCambio: { [key: string]: number } = {};
+
+  constructor(
+    private dialog: MatDialog,
+    private movimentacaoService: MovimentacaoService
+  ) { }
+
+  ngOnInit(): void {
+    this.getCambio()
+  }
 
   visibilityBoolean(): void {
     this.visibility = !this.visibility;
   }
 
-  openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void{
+  getCambio() {
+    this.movimentacaoService.getCambioBrl().subscribe({
+      next: (data) => {
+        console.log(data.rates)
+        this.dataCambio = data.rates;
+      },
+      error: (err) => {
+        console.error("Falha ao consultar dados do cambio: ", err)
+      }
+    })
+  }
+
+  openDialogMovimentacao(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(MovimentacoesDialogComponent, {
       width: '99%',
       enterAnimationDuration,
