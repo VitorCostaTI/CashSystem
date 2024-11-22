@@ -109,6 +109,10 @@ export class MovimentacoesComponent implements OnInit {
   }
 
   openDocumention(): void {
-    window.open('assets/pdf/template-comprovante-de-pagamento.pdf', '_blank');
+    window.open('assets/pdf/template-registro-de-pagamento.pdf', '_blank');
+  }
+
+  openComprovante(): void {
+    window.open('assets/pdf/comprovante.pdf', '_blank');
   }
 }
