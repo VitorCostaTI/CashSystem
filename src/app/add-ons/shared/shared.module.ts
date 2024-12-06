@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { materialModules } from '../../../Styles/material/material';
 import { RouterModule } from '@angular/router';
 import { routes } from '../modules/routes/routes.module';
+import { HttpClientModule } from '@angular/common/http';
+import { materialModules } from '../../../styles/material/material';
 
 @NgModule({
   declarations: [],
@@ -11,6 +12,7 @@ import { routes } from '../modules/routes/routes.module';
     FormsModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    HttpClientModule,
     materialModules
   ],
   exports: [
