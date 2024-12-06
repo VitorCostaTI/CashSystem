@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { MovimentacoesComponent } from '../../../components/pages/movimentacoes/movimentacoes.component';
+import { MovimentacoesDialogComponent } from '../../../components/pages/movimentacoes/movimentacoes-dialog/movimentacoes-dialog.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
+  declarations: [
+    MovimentacoesComponent,
+    MovimentacoesDialogComponent,
+  ],
+  exports: [
+    MovimentacoesComponent,
+    MovimentacoesDialogComponent,
   ]
 })
 export class MovimentacaoModule { }

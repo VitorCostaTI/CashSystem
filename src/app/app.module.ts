@@ -14,6 +14,7 @@ import { SharedModule } from './add-ons/shared/shared.module';
 
 import localePt from '@angular/common/locales/pt';
 import { ConfiguracaoModule } from './add-ons/modules/configuracao/configuracao.module';
+import { MovimentacaoModule } from './add-ons/modules/movimentacao/movimentacao.module';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -23,8 +24,6 @@ registerLocaleData(localePt, 'pt-BR');
 
     HomeComponent,
     DashboardComponent,
-    MovimentacoesComponent,
-    MovimentacoesDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +31,7 @@ registerLocaleData(localePt, 'pt-BR');
     SharedModule,
     
     ConfiguracaoModule,
+    MovimentacaoModule
   ],
   bootstrap: [
     AppComponent,
