@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
-import { SharedModule } from './Shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { MovimentacoesComponent } from './components/pages/movimentacoes/movimentacoes.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -14,22 +13,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfiguracaoComponent } from './components/pages/configuracao/configuracao.component';
 import { LimitesComponent } from './components/pages/limites/limites.component';
+import { SharedModule } from './add-ons/shared/shared.module';
 
-const routes: Routes = [
-  {
-    path: '', component: HomeComponent, children: [
-      { path: '', component: DashboardComponent },
-      { path: 'movimentacao', component: MovimentacoesComponent },
-      { path: 'configuracao', component: ConfiguracaoComponent },
-    ]
-  }
-];
 
 registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
     AppComponent,
+
     ConfiguracaoComponent,
     HomeComponent,
     DashboardComponent,
@@ -39,8 +31,7 @@ registerLocaleData(localePt, 'pt-BR');
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    ReactiveFormsModule,
+   
     SharedModule,
     HttpClientModule
   ],
