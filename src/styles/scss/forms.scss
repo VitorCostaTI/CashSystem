@@ -1,0 +1,39 @@
+.container {
+    padding: 15px;
+    padding-right: 15px;
+}
+
+.body {
+    width: 100%;
+    text-align: center;
+    margin: 25px;
+}
+
+.post {
+    margin: 25px;
+}
+
+.column-form {
+    width: 65%;
+}
+
+.form {
+    display: flex;
+
+    mat-form-field {
+        width: 100%;
+        margin-left: 15px;
+    }
+}
+
+.form-upload {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px;
+}
