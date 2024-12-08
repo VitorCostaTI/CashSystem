@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Movimentacao } from '../app/add-ons/models/Movimentacao';
+import { Movimentacao } from '../app/resources/models/Movimentacao';
 
 export const MovimentacaoData: Movimentacao[] = [
     {

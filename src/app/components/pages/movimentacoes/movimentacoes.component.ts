@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovimentacoesDialogComponent } from './movimentacoes-dialog/movimentacoes-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import * as XLSX from 'xlsx';
-import { MovimentacaoService } from '../../../add-ons/services/Movimentacao/movimentacao.service';
+import { MovimentacaoService } from '../../../resources/services/Movimentacao/movimentacao.service';
 import { MovimentacaoData } from '../../../../database/Movimentacao';
 
 @Component({
