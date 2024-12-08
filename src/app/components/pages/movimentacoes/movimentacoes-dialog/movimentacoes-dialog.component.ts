@@ -1,5 +1,6 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SharedService } from '../../../../resources/shared/shared.service';
 
 @Component({
   selector: 'app-movimentacoes-dialog',
@@ -10,10 +11,14 @@ export class MovimentacoesDialogComponent implements OnInit {
   registrarMovimentacao!: FormGroup;
   hidePlaceholder: boolean = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private sharedService: SharedService
+  ) { }
 
   ngOnInit(): void {
     this.hidePlaceholder = true;
+
     this.registrarMovimentacao = this.fb.group({
       destino: ['', [Validators.required]],
       valor: ['', [Validators.required]],
@@ -29,5 +34,15 @@ export class MovimentacoesDialogComponent implements OnInit {
     formattedValue = formattedValue.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
     event.target.value = 'R$ ' + formattedValue; // Adiciona o prefixo 'R$'
+  }
+
+  registerMovimentacao(): void {
+    try {
+      console.log(this.registrarMovimentacao.value);
+      this.sharedService.snackBarSuccess('Movimentacao registrado com sucesso!!', '');
+    } catch (error) {
+      console.error("Algo de errado, não deu certo!!");
+      this.sharedService.snackBarFailed("Falha ao registrar movimentação", "");
+    }
   }
 }

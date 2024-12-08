@@ -1,0 +1,23 @@
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    background-color: transparent !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
+  }
+  
+  .snackSuccess {
+    background: linear-gradient(to right, #00b09b, #96c93d) !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 25px !important;
+    padding: 16px !important;
+    border-radius: 4px !important;
+  }
+  
+  .snackFailed {
+    background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 25px !important;
+    padding: 16px !important;
+    border-radius: 4px !important;
+  }

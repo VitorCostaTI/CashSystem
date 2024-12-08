@@ -54,7 +54,8 @@
 <div class="actions">
     <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
     &nbsp;
-    <button mat-flat-button color="primary" [disabled]="registrarMovimentacao.invalid">Salvar</button>
+    <button mat-flat-button color="primary" [disabled]="registrarMovimentacao.invalid"
+        (click)="registerMovimentacao()">Salvar</button>
     &nbsp;
     <!-- <div class="overlay" *ngIf="isLoading" class="loader"></div> -->
 </div>
